@@ -26,6 +26,8 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="EmptyScene.h" />
+    <ClInclude Include="Vector3D.h" />
+    <ClInclude Include="P0S_Scene.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Render">
