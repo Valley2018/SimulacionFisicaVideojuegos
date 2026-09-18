@@ -17,7 +17,7 @@ public:
         // Se registra el RenderItem exactamente como en la plantilla original
         m_renderItem = new RenderItem(shape, &m_transform, Vector4(1.0f, 1.0f, 1.0f, 1.0f));
 
-        Vector3D u (3.0f, 0.0f, 0.0f);
+        Vector3D u (3.0f, 1.0f, 0.0f);
         Vector3D v (0.0f, 4.0f, 0.0f);
         Vector3D w = u.cross(v);
 
