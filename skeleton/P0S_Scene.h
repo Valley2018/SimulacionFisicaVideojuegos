@@ -5,22 +5,25 @@
 #include "RenderUtils.hpp"
 #include <vector>
 
+//Escena 1 (Práctica 0, reto A): Se carga con la tecla 1
 class P0S_Scene : public Scene {
 public:
     explicit P0S_Scene(std::string name) : Scene(std::move(name)) {}
 
     void init() override {
-        // Ejemplo: Creación de una esfera usando las utilidades de render existentes
         physx::PxShape* shape = CreateShape(physx::PxSphereGeometry(0.5f));
-        m_transform = physx::PxTransform(physx::PxVec3(0.0f, 0.0f, 0.0f));
 
-        // Se registra el RenderItem exactamente como en la plantilla original
+        //Origen
+        m_transform = physx::PxTransform(physx::PxVec3(0.0f, 0.0f, 0.0f));
         m_renderItem = new RenderItem(shape, &m_transform, Vector4(1.0f, 1.0f, 1.0f, 1.0f));
 
+        //Creación de vectores
         Vector3D u (3.0f, 1.0f, 0.0f);
         Vector3D v (0.0f, 4.0f, 0.0f);
+        //Si se invierte el producto vectorial (v.cross(u)) el vector w cambia de signo
         Vector3D w = u.cross(v);
 
+        //Normalización y escalado
         u = u.normalize();
         u = u * 5.0f;
 

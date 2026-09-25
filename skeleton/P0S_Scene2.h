@@ -5,20 +5,22 @@
 #include "RenderUtils.hpp"
 #include <vector>
 
+//Escena 2 (Práctica 0, reto B): Se carga con la tecla 2
 class P0S_Scene2 : public Scene {
 public:
     explicit P0S_Scene2(std::string name) : Scene(std::move(name)) {}
 
     void init() override {
-        // Ejemplo: Creación de una esfera usando las utilidades de render existentes
         physx::PxShape* shape = CreateShape(physx::PxSphereGeometry(0.5f));
 
         //Enemigo
         m_transform = physx::PxTransform(physx::PxVec3(0.0f, 0.0f, 0.0f));
         m_renderItem = new RenderItem(shape, &m_transform, Vector4(1.0f, 1.0f, 1.0f, 1.0f));
 
+        //Dirección de visión
         Vector3D dVision(0.0f, 0.0f, 1.0f);
 
+        //Objetivos
         Vector3D P_1(2.0, 0.0, 3.0), 
             P_2(-4.0, 0.0, 1.0), 
             P_3(0.0, 0.0, - 5.0) ,
@@ -37,6 +39,8 @@ public:
         m_renderItem4 = new RenderItem(shape, &m_transform4, setColor(P_4, dVision));
     }
 
+    //Método setColor para cambiar el color del objetivo en función
+    //de su posición en relación con el enemigo usando el producto escalar.
     Vector4 setColor(Vector3D obj, Vector3D vis) {
         Vector4 color;
         if (obj.dot(vis) > 0.0f) color = Vector4(0.0f, 1.0f, 0.0f, 1.0f);

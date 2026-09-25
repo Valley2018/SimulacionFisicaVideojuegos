@@ -5,19 +5,20 @@
 #include "RenderUtils.hpp"
 #include <vector>
 
+//Escena 3 (Práctica 0, reto C): Se carga con la tecla 3
 class P0S_Scene3 : public Scene {
 public:
     explicit P0S_Scene3(std::string name) : Scene(std::move(name)) {}
 
     void init() override {
-        // Ejemplo: Creación de una esfera usando las utilidades de render existentes
         physx::PxShape* shape = CreateShape(physx::PxSphereGeometry(0.5f));
         physx::PxShape* shape1 = CreateShape(physx::PxSphereGeometry(1.0f));
 
-        //Enemigo
+        //Origen
         m_transform = physx::PxTransform(physx::PxVec3(0.0f, 0.0f, 0.0f));
         m_renderItem = new RenderItem(shape, &m_transform, Vector4(1.0f, 1.0f, 1.0f, 1.0f));
 
+        //Extremos
         Vector3D A(-8.0, 1.0, -8.0),
             B(8.0, 8.0, 8.0);
 
@@ -30,9 +31,12 @@ public:
         float t = 0.0f;
         float incr = 1.0f / 10.0f;
 
+        //Uso de vectores para guardar los transforms y renderers
+        //de las esferas intermedias
         m_ballTransforms.reserve(10);
         m_ballRenderItems.reserve(10);
 
+        //Calculo de la posición de cada esfera y creación de las mismas
         for (int i = 1; i <= 10; ++i) {
             float t = static_cast<float>(i) / 11.0f;
 

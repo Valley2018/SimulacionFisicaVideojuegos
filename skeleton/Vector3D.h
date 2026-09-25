@@ -4,27 +4,33 @@
 
 class Vector3D {
 public:
+	//Coordenadas del vector y constructoras.
 	float x, y, z;
 	Vector3D(float _x = 0, float _y = 0, float _z = 0) : x(_x), y(_y), z(_z){}
 	Vector3D(physx::PxVec3 vector) : x(vector.x), y(vector.y), z(vector.z){}
 	
+	//Módulo
 	float magnitude () const {
 		return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
 	}
 	
+	//Normalización
 	Vector3D normalize() const {
 		float mag = magnitude();
 		return{ x / mag, y / mag, z / mag };
 	}
 
+	//Producto escalar
 	float dot(const Vector3D& v) const {
 		return (x * v.x + y * v.y + z * v.z);
 	}
 
+	//Producto vectorial
 	Vector3D cross(const Vector3D& v) const {
 		return{ y * v.z - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x };
 	}
 
+	//Operadores
 	bool operator ==(Vector3D& v) {
 		return(x == v.x && y == v.y && z == v.z);
 	}
@@ -67,6 +73,7 @@ public:
 		return *this;
 	}
 
+	//Operador de conversión a PhysX
 	operator physx::PxVec3() const {
 		return physx::PxVec3(x, y, z);
 	}
