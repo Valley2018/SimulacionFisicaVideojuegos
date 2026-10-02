@@ -1,4 +1,5 @@
 #include "Particle.h"
+
 //Inicializar valores de la partícula
 Particle::Particle(Vector3D _pos, Vector3D _vel, Vector3D _ac, float _damp) {
     physx::PxShape* shape = CreateShape(physx::PxSphereGeometry(0.5f));
@@ -27,6 +28,7 @@ void Particle::integrate(double t) {
 //Método de Euler Semi-implícito
 void Particle::integrateSemi(double t) {
     vel = vel + ac * t;
+    vel = vel * pow(damp, t);
    transform = physx::PxTransform(transform.p + vel * t);
 
 }
