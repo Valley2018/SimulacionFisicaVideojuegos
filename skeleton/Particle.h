@@ -10,10 +10,15 @@ public:
 	~Particle();
 
 	void integrate(double t);
+	void integrateSemi(double t);
+	void verlet(double t);
+
 private:
 	Vector3D vel;
 	Vector3D ac;
+	//Rozamiento
 	float damp;
+	Vector3D previousPos;
 
 	physx::PxTransform transform;
 	RenderItem* renderItem;
