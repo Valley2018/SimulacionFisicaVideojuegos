@@ -11,6 +11,7 @@ public:
     explicit P0S_Scene(std::string name) : Scene(std::move(name)) {}
 
     void init() override {
+        display_text = "";
         physx::PxShape* shape = CreateShape(physx::PxSphereGeometry(0.5f));
 
         //Origen
@@ -44,6 +45,7 @@ public:
     }
 
     void update(double dt) override {
+
     }
 
     void keyPress(unsigned char key, const physx::PxTransform& camera) override {

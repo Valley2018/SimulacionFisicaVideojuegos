@@ -10,13 +10,16 @@ public:
     explicit P1S_Scene(std::string name) : Scene(std::move(name)) {}
 
     void init() override {
+        display_text = "";
+
         //Origen
         p = new Particle(Vector3D(0, 0, 0), Vector3D(8, 0, 0), Vector3D(3,0,0), 0.1f);
     }
 
     //Actualizar la partícula
     void update(double dt) override {
-        p->integrate(dt);
+
+        p->verlet(dt);
     }
 
     void keyPress(unsigned char key, const physx::PxTransform& camera) override {

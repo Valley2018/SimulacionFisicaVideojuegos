@@ -11,6 +11,8 @@ public:
     explicit P0S_Scene3(std::string name) : Scene(std::move(name)) {}
 
     void init() override {
+        display_text = "";
+
         physx::PxShape* shape = CreateShape(physx::PxSphereGeometry(0.5f));
         physx::PxShape* shape1 = CreateShape(physx::PxSphereGeometry(1.0f));
 

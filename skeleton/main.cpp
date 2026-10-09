@@ -26,6 +26,7 @@
 #include "P0S_Scene2.h"
 #include "P0S_Scene3.h"
 #include "P1S_Scene.h"
+#include "P1S_Scene2.h"
 
 #include <foundation/PxSimpleTypes.h>
 #include <PxPhysicsVersion.h> // <- Macros for PhysX version checking
@@ -106,6 +107,7 @@ void initPhysics(bool interactive)
 	SceneManager::instance().registerScene<P0S_Scene2>("Escena P02");
 	SceneManager::instance().registerScene<P0S_Scene3>("Escena P03");
 	SceneManager::instance().registerScene<P1S_Scene>("Escena P1");
+	SceneManager::instance().registerScene<P1S_Scene2>("Escena P12");
 	
 	// Cargar la escena inicial
 	SceneManager::instance().changeScene("Escena P0");
@@ -136,8 +138,8 @@ void stepPhysics(bool interactive, double t)
 		gScene->fetchResults(true);
 
 		gPhysicsTimeAccumulator -= gFixedTimestep;
+		SceneManager::instance().update(gFixedTimestep);
 	}
-	SceneManager::instance().update(t);
 }
 
 

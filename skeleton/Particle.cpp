@@ -1,7 +1,7 @@
 #include "Particle.h"
 
 //Inicializar valores de la partícula
-Particle::Particle(Vector3D _pos, Vector3D _vel, Vector3D _ac, float _damp) {
+Particle::Particle(Vector3D _pos, Vector3D _vel, Vector3D _ac, float _damp, float _mass) {
     physx::PxShape* shape = CreateShape(physx::PxSphereGeometry(0.5f));
     transform = physx::PxTransform(_pos);
     previousPos = _pos;
@@ -9,6 +9,7 @@ Particle::Particle(Vector3D _pos, Vector3D _vel, Vector3D _ac, float _damp) {
     vel = _vel;
     ac = _ac;
     damp = _damp;
+    mass = _mass;
 }
 //Destructora
 Particle::~Particle() {
