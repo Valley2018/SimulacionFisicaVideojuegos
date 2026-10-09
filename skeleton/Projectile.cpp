@@ -47,6 +47,7 @@ void Projectile::keyPress(unsigned char key, const physx::PxTransform& camera) {
 //Calculo de la masa y la gravedad simuladas.
 void Projectile::recalculate() {
 	simulatedMass = realMass * pow(realSpeed, 2) / pow(simulatedSpeed, 2);
+	if(realSpeed!=0)
 	simulatedGravity = (pow((simulatedSpeed / realSpeed), 2)* realGravity);
 
 	mass = simulatedMass;
