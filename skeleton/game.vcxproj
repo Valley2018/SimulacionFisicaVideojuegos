@@ -261,7 +261,11 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ExplosionGen.cpp" />
+    <ClCompile Include="ForceGenerator.cpp" />
+    <ClCompile Include="GravityGen.cpp" />
     <ClCompile Include="P1S_Scene2.h" />
+    <ClCompile Include="P3S_Scene.h" />
     <ClCompile Include="ParticleGen.cpp" />
     <ClCompile Include="ParticleSys.cpp" />
     <ClCompile Include="Projectile.cpp" />
@@ -275,8 +279,13 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WhirlwindGen.cpp" />
+    <ClCompile Include="WindGen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExplosionGen.h" />
+    <ClInclude Include="ForceGenerator.h" />
+    <ClInclude Include="GravityGen.h" />
     <ClInclude Include="P2S_Scene.h" />
     <ClInclude Include="ParticleGen.h" />
     <ClInclude Include="ParticleSys.h" />
@@ -295,6 +304,8 @@
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Vector3D.h" />
     <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WhirlwindGen.h" />
+    <ClInclude Include="WindGen.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

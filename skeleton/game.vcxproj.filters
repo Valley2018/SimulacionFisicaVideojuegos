@@ -33,6 +33,24 @@
     <ClCompile Include="ParticleGen.cpp">
       <Filter>Particle</Filter>
     </ClCompile>
+    <ClCompile Include="ExplosionGen.cpp">
+      <Filter>Force</Filter>
+    </ClCompile>
+    <ClCompile Include="ForceGenerator.cpp">
+      <Filter>Force</Filter>
+    </ClCompile>
+    <ClCompile Include="GravityGen.cpp">
+      <Filter>Force</Filter>
+    </ClCompile>
+    <ClCompile Include="WhirlwindGen.cpp">
+      <Filter>Force</Filter>
+    </ClCompile>
+    <ClCompile Include="WindGen.cpp">
+      <Filter>Force</Filter>
+    </ClCompile>
+    <ClCompile Include="P3S_Scene.h">
+      <Filter>Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core.hpp" />
@@ -77,6 +95,21 @@
     <ClInclude Include="P2S_Scene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="ExplosionGen.h">
+      <Filter>Force</Filter>
+    </ClInclude>
+    <ClInclude Include="ForceGenerator.h">
+      <Filter>Force</Filter>
+    </ClInclude>
+    <ClInclude Include="GravityGen.h">
+      <Filter>Force</Filter>
+    </ClInclude>
+    <ClInclude Include="WhirlwindGen.h">
+      <Filter>Force</Filter>
+    </ClInclude>
+    <ClInclude Include="WindGen.h">
+      <Filter>Force</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Render">
@@ -87,6 +120,9 @@
     </Filter>
     <Filter Include="Particle">
       <UniqueIdentifier>{db178b2f-340c-4563-9cec-f01954506b28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Force">
+      <UniqueIdentifier>{ddb29f5d-76d7-4f53-8e46-d1e6432980cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
