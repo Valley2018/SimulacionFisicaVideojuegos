@@ -10,13 +10,29 @@
     <ClCompile Include="RenderUtils.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="callbacks.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="P0S_Scene3.h" />
-    <ClCompile Include="Particle.cpp" />
     <ClCompile Include="Projectile.cpp" />
-    <ClCompile Include="P1S_Scene2.h" />
     <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="P0S_Scene3.h">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="P1S_Scene2.h">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSys.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleGen.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core.hpp" />
@@ -28,20 +44,49 @@
     </ClInclude>
     <ClInclude Include="RenderUtils.hpp" />
     <ClInclude Include="callbacks.hpp" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="EmptyScene.h" />
     <ClInclude Include="Vector3D.h" />
-    <ClInclude Include="P0S_Scene.h" />
-    <ClInclude Include="P0S_Scene2.h" />
-    <ClInclude Include="Particle.h" />
-    <ClInclude Include="P1S_Scene.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="Weapon.h" />
+    <ClInclude Include="P0S_Scene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="P0S_Scene2.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="P1S_Scene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSys.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleGen.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2S_Scene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Render">
       <UniqueIdentifier>{d04b4f9f-5a69-465e-8070-25c6d0bcd3c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{946a4852-4198-4f03-8b03-c501f478e38a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle">
+      <UniqueIdentifier>{db178b2f-340c-4563-9cec-f01954506b28}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

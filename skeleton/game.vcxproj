@@ -262,6 +262,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="P1S_Scene2.h" />
+    <ClCompile Include="ParticleGen.cpp" />
+    <ClCompile Include="ParticleSys.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="callbacks.cpp" />
     <ClCompile Include="main.cpp" />
@@ -275,6 +277,9 @@
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="P2S_Scene.h" />
+    <ClInclude Include="ParticleGen.h" />
+    <ClInclude Include="ParticleSys.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="callbacks.hpp" />
     <ClInclude Include="core.hpp" />

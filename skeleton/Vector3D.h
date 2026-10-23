@@ -35,6 +35,10 @@ public:
 		return(x == v.x && y == v.y && z == v.z);
 	}
 
+	bool operator > (Vector3D& v) {
+		return (std::abs(x) > v.x || std::abs(y) > v.y || std::abs(z) > v.z);
+	}
+
 	Vector3D& operator =(Vector3D& v) {
 		x = v.x;
 		y = v.y;
