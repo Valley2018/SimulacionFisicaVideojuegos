@@ -5,7 +5,7 @@
 class Projectile : public Particle
 {
 public:
-	Projectile(float realMass, float realSpeed, float simulatedSpeed = 10, Vector3D _pos = Vector3D(0, 0, 0), Vector3D dir = Vector3D(1, 0, 0));
+	Projectile(float realMass, float realSpeed, float simulatedSpeed = 10, Vector3D _pos = Vector3D(0, 0, 0), Vector3D dir = Vector3D(1, 0, 0), Vector4 _color = Vector4(1.0, 1.0, 1.0, 1.0));
 	void keyPress(unsigned char key, const physx::PxTransform& camera);
 	void update(double t);
 	void setDir(Vector3D dir);

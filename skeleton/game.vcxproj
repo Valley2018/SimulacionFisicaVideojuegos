@@ -261,9 +261,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ExplosionGen.cpp" />
-    <ClCompile Include="ForceGenerator.cpp" />
-    <ClCompile Include="GravityGen.cpp" />
+    <ClCompile Include="BolaDeFuego.cpp" />
+    <ClCompile Include="GravityParticles.cpp" />
     <ClCompile Include="P1S_Scene2.h" />
     <ClCompile Include="P3S_Scene.h" />
     <ClCompile Include="ParticleGen.cpp" />
@@ -279,13 +278,15 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Weapon.cpp" />
-    <ClCompile Include="WhirlwindGen.cpp" />
-    <ClCompile Include="WindGen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BolaDeFuego.h" />
     <ClInclude Include="ExplosionGen.h" />
     <ClInclude Include="ForceGenerator.h" />
     <ClInclude Include="GravityGen.h" />
+    <ClInclude Include="GravityParticles.h" />
+    <ClInclude Include="Hechizo.h" />
+    <ClInclude Include="LaboratorioScene.h" />
     <ClInclude Include="P2S_Scene.h" />
     <ClInclude Include="ParticleGen.h" />
     <ClInclude Include="ParticleSys.h" />

@@ -33,23 +33,14 @@
     <ClCompile Include="ParticleGen.cpp">
       <Filter>Particle</Filter>
     </ClCompile>
-    <ClCompile Include="ExplosionGen.cpp">
-      <Filter>Force</Filter>
-    </ClCompile>
-    <ClCompile Include="ForceGenerator.cpp">
-      <Filter>Force</Filter>
-    </ClCompile>
-    <ClCompile Include="GravityGen.cpp">
-      <Filter>Force</Filter>
-    </ClCompile>
-    <ClCompile Include="WhirlwindGen.cpp">
-      <Filter>Force</Filter>
-    </ClCompile>
-    <ClCompile Include="WindGen.cpp">
-      <Filter>Force</Filter>
-    </ClCompile>
     <ClCompile Include="P3S_Scene.h">
       <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="BolaDeFuego.cpp">
+      <Filter>ProyectoFinal\Hechizos</Filter>
+    </ClCompile>
+    <ClCompile Include="GravityParticles.cpp">
+      <Filter>ProyectoFinal\Hechizos</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +101,18 @@
     <ClInclude Include="WindGen.h">
       <Filter>Force</Filter>
     </ClInclude>
+    <ClInclude Include="BolaDeFuego.h">
+      <Filter>ProyectoFinal\Hechizos</Filter>
+    </ClInclude>
+    <ClInclude Include="GravityParticles.h">
+      <Filter>ProyectoFinal\Hechizos</Filter>
+    </ClInclude>
+    <ClInclude Include="LaboratorioScene.h">
+      <Filter>ProyectoFinal\Escena</Filter>
+    </ClInclude>
+    <ClInclude Include="Hechizo.h">
+      <Filter>ProyectoFinal\Hechizos</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Render">
@@ -123,6 +126,15 @@
     </Filter>
     <Filter Include="Force">
       <UniqueIdentifier>{ddb29f5d-76d7-4f53-8e46-d1e6432980cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProyectoFinal">
+      <UniqueIdentifier>{84bce654-63fb-41c7-be07-48ede04c9c83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProyectoFinal\Hechizos">
+      <UniqueIdentifier>{955e2c2e-279a-4d91-b58c-ac360a9a1200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProyectoFinal\Escena">
+      <UniqueIdentifier>{8e6303c1-0bcd-434f-a5b5-0e61764a9500}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

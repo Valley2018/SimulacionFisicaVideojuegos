@@ -1,8 +1,7 @@
 #include "Projectile.h"
-#include <iostream>
 
-Projectile::Projectile(float _realMass, float _realSpeed, float _simulatedSpeed, Vector3D _pos, Vector3D _dir) : 
-	Particle(_pos, { _simulatedSpeed, 0, 0 }, { 0, -9.8, 0 }, 1.0f){
+Projectile::Projectile(float _realMass, float _realSpeed, float _simulatedSpeed, Vector3D _pos, Vector3D _dir, Vector4 color) :
+	Particle(_pos, { _simulatedSpeed, 0, 0 }, { 0, -9.8, 0 }, 1.0f, 0.1f, -1.0f, 0.5f, color){
 
 	realGravity = -9.81;
 	simulatedSpeed = _simulatedSpeed;
@@ -15,14 +14,6 @@ Projectile::Projectile(float _realMass, float _realSpeed, float _simulatedSpeed,
 
 
 void Projectile::update(double t) {
-	/*std::cout << "Masa: " << realMass << std::endl;
-	std::cout << "MasaSim: " << simulatedMass << std::endl;
-	std::cout << "Velocidad: " << realSpeed << std::endl;
-	std::cout << "VelocidadSim: " << simulatedSpeed << std::endl;*/
-	//std::cout << "Pos: (" << transform.p.x << ", " << transform.p.y << ", " << transform.p.z << ")" << std::endl;
-	//std::cout << "Vel: (" << vel.x << ", " << vel.y << ", " << vel.z << ")" << std::endl;
-	//std::cout << "Ac: (" << ac.x << ", " << ac.y << ", " << ac.z << ")" << std::endl;
-
 	integrate(t);
 }
 

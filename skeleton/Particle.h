@@ -15,9 +15,11 @@ public:
 	void integrateSemi(double t);
 	void verlet(double t);
 
-	void setMass(float m) { mass = m; }
+	float getMass() { return mass; }
+	Vector3D getSpeed() { return vel; }
 	void setVel(Vector3D v) { vel = v; }
 	void setAc(Vector3D a) { ac = a; }
+	void applyForce(Vector3D f) { force = f; ac = f * pow(mass, -1); }
 	float setLifeTime(double dt) { return lifeTime -= dt; }
 	Vector3D getPos() {  return transform.p; }
 
@@ -32,6 +34,7 @@ protected:
 	physx::PxTransform transform;
 	Vector3D vel;
 	Vector3D ac;
+	Vector3D force;
 	float mass;
 	Shape s;
 	physx::PxQuat rot;

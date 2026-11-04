@@ -1,6 +1,5 @@
 #include "ParticleGen.h"
 #include <random>
-#include <iostream>
 ParticleGen::ParticleGen(Vector3D _pos, Vector3D _vel, Vector3D _ac, float _damp, float _mass, float _lifeTime, float _size, Vector4 _color, Particle::Shape _shape, physx::PxQuat _rot, Vector3D pIncr, Vector3D vDes, Vector3D aIncr, float dIncr, float mIncr, float lIncr, float sIncr, Vector4 cIncr) {
 	modelo.pos = _pos;
 	modelo.vel = _vel;
