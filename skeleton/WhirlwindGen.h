@@ -1,12 +1,12 @@
 #pragma once
 #include "WindGen.h"
 
-//Generador de tornados (hereda del generador de viento)
+//Generador de tornados (hereda del generador de viento).  Se desactiva/activa con 'W' (mayúscula).
 class WhirlwindGen : public WindGen
 {
 public:
 
-    WhirlwindGen(Vector3D _center, float _K, Vector3D _actionSpace = Vector3D(500.0f, 500.0f, 500.0f)) : WindGen(Vector3D(0, 0, 0), _K, 0, _actionSpace), center(_center)
+    WhirlwindGen(Vector3D _center, float _K, Vector3D _actionSpace = Vector3D(500.0f, 500.0f, 500.0f)) : WindGen(Vector3D(0, 0, 0), _K, 0, _actionSpace), center(_center), activated(true)
     {
     }
 
@@ -33,7 +33,14 @@ public:
         return fuerza;
     }
 
+    void keyPressed(unsigned char key) override{
+        if (key == 'V') activated = !activated;
+    }
+    virtual bool isActivated() override { return activated; }
+
+
 private:
     Vector3D center;
     Vector3D fuerza;
+    bool activated;
 };

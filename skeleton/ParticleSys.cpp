@@ -14,7 +14,6 @@ ParticleSys::~ParticleSys() {
 	for (auto p : particles) delete p;
 	particles.clear();
 
-    for (auto f : forceVector) delete f;
     forceVector.clear();
 
     for (auto g : genVector) delete g;
@@ -37,14 +36,11 @@ void ParticleSys::update(double dt) {
         {
             Vector3D f(0, 0, 0);
             for (auto fuerza : forceVector) {
-                if (fuerza->getActionSpace() > p->getPos())
+                if (fuerza->isActivated() && fuerza->getActionSpace() > p->getPos())
                 {
                     fuerza->setForce(p);
                     Vector3D fuerzaActual = fuerza->getForce();
                     f += fuerza->getForce();
-
-                  
-
                 }
             }
             p->applyForce(f);

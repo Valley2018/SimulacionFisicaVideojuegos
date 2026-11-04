@@ -3,12 +3,12 @@
 #include "ForceGenerator.h"
 #include <cmath>
 
-//Generador de explosiones con onda expansiva 
+//Generador de explosiones con onda expansiva.  Se desactiva/activa con 'x'.
 class ExplosionGen : public ForceGenerator
 {
 public:
-    ExplosionGen(Vector3D _center = Vector3D (0.0f, 0.0f, 0.0f),  float _K = 1000.0f,  float _ve = 340.0f, float _tau = 1.0f,
-        Vector3D _actionSpace = Vector3D(500.0f, 500.0f, 500.0f)) : center(_center), K(_K), ve(_ve),  tau(_tau), actionSpace(_actionSpace),  time(0.0f),  active(false),  fuerza(0, 0, 0)
+    ExplosionGen(Vector3D _center = Vector3D(0.0f, 0.0f, 0.0f), float _K = 1000.0f, float _ve = 340.0f, float _tau = 1.0f,
+        Vector3D _actionSpace = Vector3D(500.0f, 500.0f, 500.0f)) : center(_center), K(_K), ve(_ve), tau(_tau), actionSpace(_actionSpace), time(0.0f), active(false), fuerza(0, 0, 0), activated(true)
     {
     }
 
@@ -61,6 +61,11 @@ public:
         }
     }
 
+    void keyPressed(unsigned char key) override{
+        if (key == 'x') activated = !activated;
+    }
+    virtual bool isActivated() override{ return activated; }
+
 private:
     Vector3D center;
     Vector3D actionSpace;
@@ -71,6 +76,6 @@ private:
     float time;
 
     bool active;
-
+    bool activated;
     Vector3D fuerza;
 };
