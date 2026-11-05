@@ -42,10 +42,13 @@
     <ClCompile Include="GravityParticles.cpp">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClCompile>
-    <ClCompile Include="FireForceGenerator.cpp">
-      <Filter>Force</Filter>
-    </ClCompile>
     <ClCompile Include="Goblin.cpp">
+      <Filter>ProyectoFinal\Hechizos</Filter>
+    </ClCompile>
+    <ClCompile Include="GoblinSpell.cpp">
+      <Filter>ProyectoFinal\Hechizos</Filter>
+    </ClCompile>
+    <ClCompile Include="MagneticSpell.cpp">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClCompile>
   </ItemGroup>
@@ -124,6 +127,15 @@
     </ClInclude>
     <ClInclude Include="Goblin.h">
       <Filter>ProyectoFinal\Hechizos</Filter>
+    </ClInclude>
+    <ClInclude Include="GoblinSpell.h">
+      <Filter>ProyectoFinal\Hechizos</Filter>
+    </ClInclude>
+    <ClInclude Include="MagneticSpell.h">
+      <Filter>ProyectoFinal\Hechizos</Filter>
+    </ClInclude>
+    <ClInclude Include="MagneticForceGenerator.h">
+      <Filter>Force</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

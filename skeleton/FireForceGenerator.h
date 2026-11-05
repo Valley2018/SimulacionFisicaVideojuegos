@@ -9,23 +9,19 @@ public:
 
     void setForce(Particle* p) override {
 
-        // MUY IMPORTANTE: reiniciar la fuerza para cada partícula
         force = Vector3D(0, 0, 0);
 
         if (!activated || p == nullptr)
             return;
 
-        // Vector desde la bola hasta la partícula
         Vector3D direction = p->getPos() - position;
 
         float distance = direction.magnitude();
 
-        // Solo afecta a las partículas cercanas
         if (distance < radius && distance > 0.001f) {
 
             direction.normalize();
 
-            // La fuerza disminuye al alejarse de la bola
             float intensity = strength * (1.0f - distance / radius);
 
             force = direction * intensity;
@@ -36,7 +32,7 @@ public:
     virtual Vector3D getForce() { return force; }
 
     void keyPressed(unsigned char key) override {
-        if (key == 'b') activated = !activated;
+        if (key == 'F') activated = !activated;
     }
 
     Vector3D getActionSpace() { return actionSpace; }

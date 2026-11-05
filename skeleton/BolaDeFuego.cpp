@@ -1,5 +1,4 @@
 #include "BolaDeFuego.h"
-#include "Weapon.h"
 
 BolaDeFuego::BolaDeFuego() {
     bala = nullptr;

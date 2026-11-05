@@ -17,6 +17,7 @@ public:
 	void addForce(ForceGenerator* f);
 	void removeForce(ForceGenerator* f);
 	void addGen(ParticleGen* g);
+	void setGen() { for (auto g : genVector) g->setGen(); }
 private:
 	std::vector<Particle*> particles;
 	std::vector<ForceGenerator*> forceVector;
@@ -26,6 +27,5 @@ private:
 
 	float spawnInterval; 
 	float spawnTimer;
-	bool generate;
 };
 

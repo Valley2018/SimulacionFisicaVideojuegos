@@ -19,7 +19,8 @@ public:
 	Vector3D getSpeed() { return vel; }
 	void setVel(Vector3D v) { vel = v; }
 	void setAc(Vector3D a) { ac = a; }
-	void applyForce(Vector3D f) { force = f; ac = f * pow(mass, -1); }
+	void applyForce(Vector3D f) { force = f;  ac = force * pow(mass, -1);
+	}
 	float setLifeTime(double dt) { return lifeTime -= dt; }
 	Vector3D getPos() {  return transform.p; }
 

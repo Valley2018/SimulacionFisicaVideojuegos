@@ -4,6 +4,8 @@
 #include "ParticleSys.h"
 #include "Hechizo.h"
 #include "Gravityparticles.h"
+#include "GoblinSpell.h"
+#include "MagneticSpell.h"
 #include "BolaDeFuego.h"
 #include <vector>
 #include <stdexcept>
@@ -16,13 +18,18 @@ public:
     void init() override {
         display_text = " ";
 
-        
-        auto gravityParticles = new GravityParticles();
         auto bolaDeFuego = new BolaDeFuego();
+        auto goblinSpell = new GoblinSpell();
+        auto magneticSpell = new MagneticSpell();
+        auto gravityParticles = new GravityParticles();
 
         bolaDeFuego->setGravityParticles(gravityParticles);
-        hechizos.push_back(gravityParticles);
+        magneticSpell->setGravityParticles(gravityParticles);
+
         hechizos.push_back(bolaDeFuego);
+        hechizos.push_back(goblinSpell);
+        hechizos.push_back(magneticSpell);
+        hechizos.push_back(gravityParticles);
 
         createRoom();
     }

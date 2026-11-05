@@ -1,6 +1,7 @@
 #include "ParticleGen.h"
 #include <random>
-ParticleGen::ParticleGen(Vector3D _pos, Vector3D _vel, Vector3D _ac, float _damp, float _mass, float _lifeTime, float _size, Vector4 _color, Particle::Shape _shape, physx::PxQuat _rot, Vector3D pIncr, Vector3D vDes, Vector3D aIncr, float dIncr, float mIncr, float lIncr, float sIncr, Vector4 cIncr) {
+ParticleGen::ParticleGen(Vector3D _pos, Vector3D _vel, Vector3D _ac, float _damp, float _mass, float _lifeTime, float _size, Vector4 _color, Particle::Shape _shape, physx::PxQuat _rot, 
+	Vector3D pIncr, Vector3D vDes, Vector3D aIncr, float dIncr, float mIncr, float lIncr, float sIncr, Vector4 cIncr, bool _gen) {
 	modelo.pos = _pos;
 	modelo.vel = _vel;
 	modelo.ac = _ac;
@@ -20,6 +21,8 @@ ParticleGen::ParticleGen(Vector3D _pos, Vector3D _vel, Vector3D _ac, float _damp
 	incr.lifeTimeIncr = lIncr;
 	incr.sizeIncr = sIncr;
 	incr.colorIncr = cIncr;
+
+	gen = _gen;
 }
 
 ParticleGen::~ParticleGen() {

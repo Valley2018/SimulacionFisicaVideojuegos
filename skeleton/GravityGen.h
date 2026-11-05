@@ -20,7 +20,7 @@ public:
 	Vector3D getActionSpace() override{ return actionSpace; }
 
 	void keyPressed(unsigned char key) {
-		if (key == 'g') activated = !activated;
+		if (key == 'G') activated = !activated;
 		std::cout << activated << std::endl;
 	}
 	virtual bool isActivated() override { return activated; }

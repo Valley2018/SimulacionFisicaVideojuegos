@@ -26,5 +26,5 @@ void GravityParticles::removeForceGenerator(ForceGenerator* f) {
 
 void GravityParticles::keyPress(unsigned char key, const physx::PxTransform& camera) {
 
-	if (key == 'b') 
+	if (key == 'g') { sistema->setGen(); }
 }

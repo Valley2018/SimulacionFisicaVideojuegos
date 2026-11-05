@@ -40,6 +40,7 @@ Particle::~Particle() {
 
 //Método de Euler
 void Particle::integrate(double t) {
+   
     transform = physx::PxTransform(transform.p + vel * t, rot);
     vel = vel + ac * t;
     vel = vel * pow(damp, t);
@@ -47,6 +48,8 @@ void Particle::integrate(double t) {
 
 //Método de Euler Semi-implícito
 void Particle::integrateSemi(double t) {
+    ac = force * pow(mass, -1);
+
     vel = vel + ac * t;
     vel = vel * pow(damp, t);
    transform = physx::PxTransform(transform.p + vel * t, rot);
@@ -55,6 +58,8 @@ void Particle::integrateSemi(double t) {
 
 //Método de Verlet
 void Particle::verlet(double t) {
+    ac = force * pow(mass, -1);
+
     Vector3D currentPos = transform.p;
 
     transform = physx::PxTransform(
