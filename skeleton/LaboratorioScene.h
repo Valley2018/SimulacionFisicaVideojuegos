@@ -4,6 +4,7 @@
 #include "ParticleSys.h"
 #include "Hechizo.h"
 #include "Gravityparticles.h"
+#include "BolaDeFuego.h"
 #include <vector>
 #include <stdexcept>
 
@@ -17,8 +18,11 @@ public:
 
         
         auto gravityParticles = new GravityParticles();
+        auto bolaDeFuego = new BolaDeFuego();
 
+        bolaDeFuego->setGravityParticles(gravityParticles);
         hechizos.push_back(gravityParticles);
+        hechizos.push_back(bolaDeFuego);
 
         createRoom();
     }

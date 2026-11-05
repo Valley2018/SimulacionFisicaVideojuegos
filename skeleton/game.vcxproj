@@ -262,6 +262,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BolaDeFuego.cpp" />
+    <ClCompile Include="FireForceGenerator.cpp" />
+    <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="GravityParticles.cpp" />
     <ClCompile Include="P1S_Scene2.h" />
     <ClCompile Include="P3S_Scene.h" />
@@ -282,7 +284,9 @@
   <ItemGroup>
     <ClInclude Include="BolaDeFuego.h" />
     <ClInclude Include="ExplosionGen.h" />
+    <ClInclude Include="FireForceGenerator.h" />
     <ClInclude Include="ForceGenerator.h" />
+    <ClInclude Include="Goblin.h" />
     <ClInclude Include="GravityGen.h" />
     <ClInclude Include="GravityParticles.h" />
     <ClInclude Include="Hechizo.h" />

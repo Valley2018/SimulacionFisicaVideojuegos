@@ -2,33 +2,75 @@
 #include "Weapon.h"
 
 BolaDeFuego::BolaDeFuego() {
+    bala = nullptr;
+    ffg = nullptr;
+    shooting = false;
 }
-//Destructora
+
 BolaDeFuego::~BolaDeFuego() {
-    for (auto p : balas) delete p;
-    balas.clear();
+
+    delete bala;
+    bala = nullptr;
+
+    if (ffg != nullptr && gravityParticles != nullptr) {
+        gravityParticles->removeForceGenerator(ffg);
+    }
+
+    delete ffg;
+    ffg = nullptr;
 }
 
-//Disparar el proyectil desde la cámara con parámetros según su tipo
 void BolaDeFuego::shoot(const physx::PxTransform& camera) {
-    Vector3D eye(camera.p.x, camera.p.y, camera.p.z);
-    physx::PxVec3 dir = camera.q.rotate(physx::PxVec3(0, 0, -1));
-    Vector3D direction(dir.x, dir.y, dir.z);
-    float vel, mass;
-        vel = 300;
-        mass = 0.02;
-    Projectile* p = new Projectile(mass, vel, 10, eye, dir, Vector4(1.0f, .0f, 0.0f, 1.0f));
-    balas.push_back(p);
-}
 
+    if (shooting) return;
+
+    shooting = true;
+
+    Vector3D eye(camera.p.x, camera.p.y, camera.p.z);
+
+    physx::PxVec3 dir = camera.q.rotate(physx::PxVec3(0, 0, -1));
+
+    bala = new Projectile(0.02f, 300, 10, eye, dir, Vector4(1.0f, 0.5f, 0.0f, 1.0f), 7.0f, 2.0f);
+
+    ffg = new FireForceGenerator(50.0f, 5.0f);
+    ffg->setPosition(eye);
+
+    if (gravityParticles != nullptr) {
+        gravityParticles->addForceGenerator(ffg);
+    }
+}
 
 void BolaDeFuego::update(double dt) {
-    for (auto p : balas) p->update(dt);
+
+    if (!shooting || bala == nullptr) return;
+
+    bala->update(dt);
+
+    if (!bala->isAlive()) {
+        delete bala;
+        bala = nullptr;
+
+        if (gravityParticles != nullptr) {
+            gravityParticles->removeForceGenerator(ffg);
+        }
+        delete ffg;
+        ffg = nullptr;
+
+        shooting = false;
+    }
+    else {
+        ffg->setPosition(bala->getPos());
+    }
 }
 
-void BolaDeFuego::keyPress(unsigned char key, const physx::PxTransform& camera) {
-    if (key == 'f') {
+void BolaDeFuego::keyPress(unsigned char key,
+    const physx::PxTransform& camera) {
+
+    if (key == 'f' && !shooting) {
         shoot(camera);
     }
-    for (auto p : balas) p->keyPress(key, camera);
+
+    if (bala != nullptr) {
+        bala->keyPress(key, camera);
+    }
 }

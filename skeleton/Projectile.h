@@ -5,12 +5,15 @@
 class Projectile : public Particle
 {
 public:
-	Projectile(float realMass, float realSpeed, float simulatedSpeed = 10, Vector3D _pos = Vector3D(0, 0, 0), Vector3D dir = Vector3D(1, 0, 0), Vector4 _color = Vector4(1.0, 1.0, 1.0, 1.0));
+	Projectile(float realMass, float realSpeed, float simulatedSpeed = 10, Vector3D _pos = Vector3D(0, 0, 0), Vector3D dir = Vector3D(1, 0, 0), Vector4 _color = Vector4(1.0, 1.0, 1.0, 1.0), float _lifeTime = -1.0f, float _size = 0.5f);
 	void keyPress(unsigned char key, const physx::PxTransform& camera);
 	void update(double t);
 	void setDir(Vector3D dir);
 	float getMass() { return simulatedMass; }
 	float getGravity() { return simulatedGravity; }
+	bool isAlive() {
+		return lifeTime > 0.0f;
+	}
 private:
 	void recalculate();
 	float realMass;

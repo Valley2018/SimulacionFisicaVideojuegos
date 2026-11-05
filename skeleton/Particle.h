@@ -26,11 +26,12 @@ public:
 private:
 	//Rozamiento
 	float damp;
-	float lifeTime;
 	Vector3D previousPos;
 	RenderItem* renderItem;
 
 protected:
+	float lifeTime;
+
 	physx::PxTransform transform;
 	Vector3D vel;
 	Vector3D ac;

@@ -1,7 +1,7 @@
 #include "Projectile.h"
 
-Projectile::Projectile(float _realMass, float _realSpeed, float _simulatedSpeed, Vector3D _pos, Vector3D _dir, Vector4 color) :
-	Particle(_pos, { _simulatedSpeed, 0, 0 }, { 0, -9.8, 0 }, 1.0f, 0.1f, -1.0f, 0.5f, color){
+Projectile::Projectile(float _realMass, float _realSpeed, float _simulatedSpeed, Vector3D _pos, Vector3D _dir, Vector4 color, float _lifeTime, float _size) :
+	Particle(_pos, { _simulatedSpeed, 0, 0 }, { 0, -9.8, 0 }, 1.0f, 0.1f, _lifeTime, _size, color){
 
 	realGravity = -9.81;
 	simulatedSpeed = _simulatedSpeed;
@@ -15,6 +15,7 @@ Projectile::Projectile(float _realMass, float _realSpeed, float _simulatedSpeed,
 
 void Projectile::update(double t) {
 	integrate(t);
+	setLifeTime(t);
 }
 
 void Projectile::keyPress(unsigned char key, const physx::PxTransform& camera) {

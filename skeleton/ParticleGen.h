@@ -41,8 +41,14 @@ public:
 	double NormalDistr(double media, double d);
 
 	Particle* generate(double dt);
+
+	float getSpawnInterval() { return spawnInterval; }
 private:
 	ParticleModel modelo;
 	Increments incr;
+
+	float spawnInterval;
+	float spawnTimer;
+	bool generate;
 };
 
