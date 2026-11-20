@@ -20,16 +20,15 @@
 
 #include <iostream>
 // Para las escenas del curso, se incluyen los headers de las prácticas y la escena vacía
-#include "SceneManager.h"
-#include "EmptyScene.h"
-#include "P0S_Scene.h"
-#include "P0S_Scene2.h"
-#include "P0S_Scene3.h"
-#include "P1S_Scene.h"
-#include "P1S_Scene2.h"
-#include "P2S_Scene.h"
-#include "P3S_Scene.h"
-#include "LaboratorioScene.h"
+#include "Scenes/SceneManager.h"
+#include "Scenes/P0S_Scene.h"
+#include "Scenes/P0S_Scene2.h"
+#include "Scenes/P0S_Scene3.h"
+#include "Scenes/P1S_Scene.h"
+#include "Scenes/P1S_Scene2.h"
+#include "Scenes/P2S_Scene.h"
+#include "Scenes/P3S_Scene.h"
+#include "ProyectoFinal/LaboratorioScene.h"
 
 #include <foundation/PxSimpleTypes.h>
 #include <PxPhysicsVersion.h> // <- Macros for PhysX version checking
@@ -105,7 +104,6 @@ void initPhysics(bool interactive)
 	sceneDesc.simulationEventCallback = &gContactReportCallback;
 	gScene = gPhysics->createScene(sceneDesc);
 	// Registrar las prácticas/escenas del curso
-	SceneManager::instance().registerScene<EmptyScene>("EscenaVacia");
 	SceneManager::instance().registerScene<P0S_Scene>("Escena P0");
 	SceneManager::instance().registerScene<P0S_Scene2>("Escena P02");
 	SceneManager::instance().registerScene<P0S_Scene3>("Escena P03");

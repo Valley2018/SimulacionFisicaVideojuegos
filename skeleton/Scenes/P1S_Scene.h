@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Scene.h"
-#include "Particle.h"
+#include "../Particle/Particle.h"
 #include <vector>
 
 //Escena 4 (Práctica 1.1): Se carga con la tecla 4

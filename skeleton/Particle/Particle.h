@@ -1,6 +1,6 @@
 #pragma once
-#include "Vector3D.h"
-#include "RenderUtils.hpp"
+#include "../Vector3D.h"
+#include "../RenderUtils.hpp"
 #include "PxPhysicsAPI.h"
 
 class Particle

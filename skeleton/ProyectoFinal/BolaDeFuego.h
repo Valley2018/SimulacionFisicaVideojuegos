@@ -1,10 +1,10 @@
 #pragma once
-#include "Vector3D.h"
+#include "../Vector3D.h"
 #include "Hechizo.h"
 #include "GravityParticles.h"
 #include "FireForceGenerator.h"
-#include "Projectile.h"
-#include "RenderUtils.hpp"
+#include "../Proyectil/Projectile.h"
+#include "../RenderUtils.hpp"
 #include "PxPhysicsAPI.h"
 #include <vector>
 #include <stdexcept>

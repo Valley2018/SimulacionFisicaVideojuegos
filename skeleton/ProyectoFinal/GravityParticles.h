@@ -1,6 +1,6 @@
 #pragma once
 #include "Hechizo.h"
-#include "ParticleSys.h"
+#include "../Particle/ParticleSys.h"
 
 class GravityParticles : public Hechizo
 {

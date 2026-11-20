@@ -1,11 +1,11 @@
 #pragma once
 
 #include "Scene.h"
-#include "ParticleSys.h"
-#include "GravityGen.h"
-#include "WindGen.h"
-#include "WhirlwindGen.h"
-#include "ExplosionGen.h"
+#include "../Particle/ParticleSys.h"
+#include "../Force/GravityGen.h"
+#include "../Force/WindGen.h"
+#include "../Force/WhirlwindGen.h"
+#include "../Force/ExplosionGen.h"
 #include <vector>
 #include <stdexcept>
 

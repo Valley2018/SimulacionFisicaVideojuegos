@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Scene.h"
-#include "ParticleSys.h"
+#include "../Scenes/Scene.h"
+#include "../Particle/ParticleSys.h"
 #include "Hechizo.h"
 #include "Gravityparticles.h"
 #include "GoblinSpell.h"

@@ -1,5 +1,5 @@
 #pragma once
-#include "ForceGenerator.h"
+#include "../Force/ForceGenerator.h"
 
 class FireForceGenerator : public ForceGenerator {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 #pragma once
-#include "ForceGenerator.h"
+#include "../Force/ForceGenerator.h"
 
 class MagneticForceGenerator : public ForceGenerator {
 public:

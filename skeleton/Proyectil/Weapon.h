@@ -1,7 +1,7 @@
 #pragma once
-#include "Vector3D.h"
+#include "../Vector3D.h"
 #include "Projectile.h"
-#include "RenderUtils.hpp"
+#include "../RenderUtils.hpp"
 #include "PxPhysicsAPI.h"
 #include <vector>
 #include <stdexcept>

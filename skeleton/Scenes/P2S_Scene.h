@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Scene.h"
-#include "ParticleSys.h"
+#include "../Particle/ParticleSys.h"
 #include <vector>
 #include <stdexcept>
 

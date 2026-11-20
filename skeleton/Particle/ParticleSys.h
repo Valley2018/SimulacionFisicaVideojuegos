@@ -1,7 +1,7 @@
 #pragma once
 #include "Particle.h"
 #include "ParticleGen.h"
-#include "ForceGenerator.h"
+#include "../Force/ForceGenerator.h"
 #include <vector>
 
 //Sistema de partículas. Contiene un vector con todas sus partículas. Las actualiza

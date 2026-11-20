@@ -1,5 +1,5 @@
 #include "SceneManager.h"
-#include "Vector3D.h"
+#include "../Vector3D.h"
 #include <iostream>
 
 // Solicita el cambio de escena. Si el nombre no está registrado, se escribe

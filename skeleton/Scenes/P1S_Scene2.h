@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Scene.h"
-#include "Weapon.h"
+#include "../Proyectil/Weapon.h"
 #include <vector>
 #include <iostream>
 #include <stdexcept>

@@ -10,45 +10,45 @@
     <ClCompile Include="RenderUtils.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="callbacks.cpp" />
-    <ClCompile Include="Projectile.cpp" />
-    <ClCompile Include="Weapon.cpp" />
-    <ClCompile Include="P0S_Scene3.h">
+    <ClCompile Include="Proyectil\Projectile.cpp" />
+    <ClCompile Include="Proyectil\Weapon.cpp" />
+    <ClCompile Include="Scenes\P0S_Scene3.h">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="P1S_Scene2.h">
+    <ClCompile Include="Scenes\P1S_Scene2.h">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
+    <ClCompile Include="Scenes\Scene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
+    <ClCompile Include="Scenes\SceneManager.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="Particle.cpp">
+    <ClCompile Include="Particle\Particle.cpp">
       <Filter>Particle</Filter>
     </ClCompile>
-    <ClCompile Include="ParticleSys.cpp">
+    <ClCompile Include="Particle\ParticleSys.cpp">
       <Filter>Particle</Filter>
     </ClCompile>
-    <ClCompile Include="ParticleGen.cpp">
+    <ClCompile Include="Particle\ParticleGen.cpp">
       <Filter>Particle</Filter>
     </ClCompile>
-    <ClCompile Include="P3S_Scene.h">
+    <ClCompile Include="Scenes\P3S_Scene.h">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="BolaDeFuego.cpp">
+    <ClCompile Include="ProyectoFinal\BolaDeFuego.cpp">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClCompile>
-    <ClCompile Include="GravityParticles.cpp">
+    <ClCompile Include="ProyectoFinal\GravityParticles.cpp">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClCompile>
-    <ClCompile Include="Goblin.cpp">
+    <ClCompile Include="ProyectoFinal\Goblin.cpp">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClCompile>
-    <ClCompile Include="GoblinSpell.cpp">
+    <ClCompile Include="ProyectoFinal\GoblinSpell.cpp">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClCompile>
-    <ClCompile Include="MagneticSpell.cpp">
+    <ClCompile Include="ProyectoFinal\MagneticSpell.cpp">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,78 +63,75 @@
     <ClInclude Include="RenderUtils.hpp" />
     <ClInclude Include="callbacks.hpp" />
     <ClInclude Include="Vector3D.h" />
-    <ClInclude Include="Projectile.h" />
-    <ClInclude Include="Weapon.h" />
-    <ClInclude Include="P0S_Scene.h">
+    <ClInclude Include="Proyectil\Projectile.h" />
+    <ClInclude Include="Proyectil\Weapon.h" />
+    <ClInclude Include="Scenes\P0S_Scene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="P0S_Scene2.h">
+    <ClInclude Include="Scenes\P0S_Scene2.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="P1S_Scene.h">
+    <ClInclude Include="Scenes\P1S_Scene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
+    <ClInclude Include="Scenes\Scene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="SceneManager.h">
+    <ClInclude Include="Scenes\SceneManager.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Particle.h">
+    <ClInclude Include="Particle\Particle.h">
       <Filter>Particle</Filter>
     </ClInclude>
-    <ClInclude Include="ParticleSys.h">
+    <ClInclude Include="Particle\ParticleSys.h">
       <Filter>Particle</Filter>
     </ClInclude>
-    <ClInclude Include="ParticleGen.h">
+    <ClInclude Include="Particle\ParticleGen.h">
       <Filter>Particle</Filter>
     </ClInclude>
-    <ClInclude Include="EmptyScene.h">
+    <ClInclude Include="Scenes\P2S_Scene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="P2S_Scene.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="ExplosionGen.h">
+    <ClInclude Include="Force\ExplosionGen.h">
       <Filter>Force</Filter>
     </ClInclude>
-    <ClInclude Include="ForceGenerator.h">
+    <ClInclude Include="Force\ForceGenerator.h">
       <Filter>Force</Filter>
     </ClInclude>
-    <ClInclude Include="GravityGen.h">
+    <ClInclude Include="Force\GravityGen.h">
       <Filter>Force</Filter>
     </ClInclude>
-    <ClInclude Include="WhirlwindGen.h">
+    <ClInclude Include="Force\WhirlwindGen.h">
       <Filter>Force</Filter>
     </ClInclude>
-    <ClInclude Include="WindGen.h">
+    <ClInclude Include="Force\WindGen.h">
       <Filter>Force</Filter>
     </ClInclude>
-    <ClInclude Include="BolaDeFuego.h">
+    <ClInclude Include="ProyectoFinal\BolaDeFuego.h">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClInclude>
-    <ClInclude Include="GravityParticles.h">
+    <ClInclude Include="ProyectoFinal\GravityParticles.h">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClInclude>
-    <ClInclude Include="LaboratorioScene.h">
+    <ClInclude Include="ProyectoFinal\LaboratorioScene.h">
       <Filter>ProyectoFinal\Escena</Filter>
     </ClInclude>
-    <ClInclude Include="Hechizo.h">
+    <ClInclude Include="ProyectoFinal\Hechizo.h">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClInclude>
-    <ClInclude Include="FireForceGenerator.h">
+    <ClInclude Include="ProyectoFinal\FireForceGenerator.h">
       <Filter>Force</Filter>
     </ClInclude>
-    <ClInclude Include="Goblin.h">
+    <ClInclude Include="ProyectoFinal\Goblin.h">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClInclude>
-    <ClInclude Include="GoblinSpell.h">
+    <ClInclude Include="ProyectoFinal\GoblinSpell.h">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClInclude>
-    <ClInclude Include="MagneticSpell.h">
+    <ClInclude Include="ProyectoFinal\MagneticSpell.h">
       <Filter>ProyectoFinal\Hechizos</Filter>
     </ClInclude>
-    <ClInclude Include="MagneticForceGenerator.h">
+    <ClInclude Include="ProyectoFinal\MagneticForceGenerator.h">
       <Filter>Force</Filter>
     </ClInclude>
   </ItemGroup>

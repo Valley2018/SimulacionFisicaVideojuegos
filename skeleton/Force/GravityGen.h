@@ -1,6 +1,6 @@
 #pragma once
 #include "ForceGenerator.h"
-#include "Vector3D.h"
+#include "../Vector3D.h"
 #include <iostream>
 
 //Generador de gravedad. Se desactiva/activa con 'g'.

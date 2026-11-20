@@ -1,5 +1,5 @@
 #pragma once
-#include "Particle.h"
+#include "../Particle/Particle.h"
 #include <random>
 
 //Clase proyectil que hereda de partícula.
